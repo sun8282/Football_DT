@@ -1,0 +1,27 @@
+.App {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  
+  .Team-logo {
+    /* height: 40vmin;
+    pointer-events: none; */
+    width: 150px;
+    left: 20%;
+    top: 5%;
+    position: fixed;
+  }
+  .Team_list{
+    display: flex; width: 1200px; justify-content: space-evenly;
+  }
+  .Team_list li{
+    width: 100px;
+    
+  }
+  .Team_list img{
+    width: 50px;
+  }
