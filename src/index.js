@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Squads from "./components/TeamSquad";
+import Playerdetails from "./components/playerdetails";
 import "./index.css";
 import "./reset.css";
 import App from "./App";
@@ -19,6 +20,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/details/:id" element={<Squads />} />
+      <Route path="/playerdetails/:id" element={<Playerdetails />} />
     </Routes>
   </BrowserRouter>
 );
