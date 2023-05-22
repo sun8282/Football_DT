@@ -48,7 +48,7 @@ function Squads(props) {
   }, []);
 
   if (!loading) {
-    return <Lodingbar>박는 중입니다...</Lodingbar>;
+    return <Lodingbar>로딩중...</Lodingbar>;
   } else if (footballData.response && footballData.response.length > 0) {
     const sortedData = footballData.response[0].players.sort(
       (a, b) => a.number - b.number
