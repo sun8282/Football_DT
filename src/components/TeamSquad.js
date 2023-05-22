@@ -48,13 +48,14 @@ function Squads(props) {
   }, []);
 
   if (!loading) {
-    return <Lodingbar>로딩중...</Lodingbar>;
+    return <Lodingbar>로딩중입니다...</Lodingbar>;
   } else if (footballData.response && footballData.response.length > 0) {
     const sortedData = footballData.response[0].players.sort(
       (a, b) => a.number - b.number
     );
     return (
-      <div className="App">
+      <div className="squad">
+        <div className="teamtitle">
         <a
           href={`https://www.google.com/search?q=${footballData.response[0].team.name}&aqs=chrome.0.69i59.3534j0j7&sourceid=chrome&ie=UTF-8`}
           target="blank"
@@ -64,6 +65,9 @@ function Squads(props) {
             className="Teamlogo"
           ></img>
         </a>
+        <span>{footballData.response[0].team.name}</span>
+        </div>
+        <div className="flexsquad">
         {sortedData.map((item) => {
           console.log(footballData.response);
           return (
@@ -80,6 +84,7 @@ function Squads(props) {
             </div>
           );
         })}
+        </div>
       </div>
     );
   }
