@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import "./style.css";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Squads(props) {
   const Lodingbar = styled.div`
     margin: 0 auto;
@@ -55,35 +56,145 @@ function Squads(props) {
     );
     return (
       <div className="squad">
+        <img
+          src={footballData.response[0].team.logo}
+          className="backlogo"
+        ></img>
         <div className="teamtitle">
-        <a
-          href={`https://www.google.com/search?q=${footballData.response[0].team.name}&aqs=chrome.0.69i59.3534j0j7&sourceid=chrome&ie=UTF-8`}
-          target="blank"
-        >
-          <img
-            src={footballData.response[0].team.logo}
-            className="Teamlogo"
-          ></img>
-        </a>
-        <span>{footballData.response[0].team.name}</span>
+          <a
+            href={`https://www.google.com/search?q=${footballData.response[0].team.name}&aqs=chrome.0.69i59.3534j0j7&sourceid=chrome&ie=UTF-8`}
+            target="blank"
+          >
+            <img
+              src={footballData.response[0].team.logo}
+              className="Teamlogo"
+            ></img>
+          </a>
+          <span>{footballData.response[0].team.name}</span>
         </div>
-        <div className="flexsquad">
-        {sortedData.map((item) => {
-          console.log(footballData.response);
-          return (
-            <div>
-              <a
-                href={`https://www.google.com/search?q=${item.name}&aqs=chrome.0.69i59.3534j0j7&sourceid=chrome&ie=UTF-8`}
-                target="blank"
-              >
-                <img src={item.photo}></img>
-              </a>
-              <div>
-                {item.name} {item.number === null ? "" : `no.${item.number}`}
-              </div>
-            </div>
-          );
-        })}
+        <h2 className="positiontitle">Keepers</h2>
+        <div className="positionbox">
+          {sortedData.map((item) => {
+            if (item.position == "Goalkeeper") {
+              console.log(footballData.response);
+              return (
+                <Link
+                  to={`/playerdetails/${item.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="playerbox">
+                    <img src={item.photo}></img>
+
+                    <div>
+                      <ul>
+                        <li>
+                          {item.number === null ? "" : `no.${item.number}`}
+                        </li>
+                        <li>
+                          <h2>{item.name}</h2>
+                        </li>
+                        <li>{item.position}</li>
+                        <li>age: {item.age}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <h2 className="positiontitle">Defenders</h2>
+        <div className="positionbox">
+          {sortedData.map((item) => {
+            if (item.position == "Defender") {
+              console.log(footballData.response);
+              return (
+                <Link
+                  to={`/playerdetails/${item.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="playerbox">
+                    <img src={item.photo}></img>
+
+                    <div>
+                      <ul>
+                        <li>
+                          {item.number === null ? "" : `no.${item.number}`}
+                        </li>
+                        <li>
+                          <h2>{item.name}</h2>
+                        </li>
+                        <li>{item.position}</li>
+                        <li>age: {item.age}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <h2 className="positiontitle">Midfielders</h2>
+        <div className="positionbox">
+          {sortedData.map((item) => {
+            if (item.position == "Midfielder") {
+              console.log(footballData.response);
+              return (
+                <Link
+                  to={`/playerdetails/${item.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="playerbox">
+                    <img src={item.photo}></img>
+
+                    <div>
+                      <ul>
+                        <li>
+                          {item.number === null ? "" : `no.${item.number}`}
+                        </li>
+                        <li>
+                          <h2>{item.name}</h2>
+                        </li>
+                        <li>{item.position}</li>
+                        <li>age: {item.age}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </Link>
+              );
+            }
+          })}
+        </div>
+        <h2 className="positiontitle">Attacker</h2>
+        <div className="positionbox">
+          {sortedData.map((item) => {
+            if (item.position == "Attacker") {
+              console.log(footballData.response);
+              return (
+                <Link
+                  to={`/playerdetails/${item.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className="playerbox">
+                    <img src={item.photo}></img>
+
+                    <div>
+                      <ul>
+                        <li>
+                          {item.number === null ? "" : `no.${item.number}`}
+                        </li>
+                        <li>
+                          <h2>{item.name}</h2>
+                        </li>
+                        <li>{item.position}</li>
+                        <li>age: {item.age}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </Link>
+              );
+            }
+          })}
         </div>
       </div>
     );

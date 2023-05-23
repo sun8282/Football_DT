@@ -6,14 +6,16 @@ import Plvideo from "./components/plvideo";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-function App() {
+import NewsList from "./components/newslist";
 
+function App() {
   return (
     <>
-        <Plvideo></Plvideo>
-        <Table></Table>
+      <Plvideo></Plvideo>
+      <Table></Table>
+      <NewsList></NewsList>
     </>
-  )
+  );
 }
 
 export default App;
