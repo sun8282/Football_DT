@@ -101,28 +101,64 @@ function Quiz() {
                 <input type="radio" name="boxinput" id="input2" hidden></input>
                 <input type="radio" name="boxinput" id="input3" hidden></input>
                 <div className="exambox opa" >
-                    {QuizData[0].step1[0].map(element => {
+                    {QuizData[0].step1[0].map((element,i) => {
                       console.log(element.title);
                       return(
-                        <div>{element.title}</div>
+                        <>
+                        <div className="questionbox">
+                            <div className="questiontitle">
+                                <h3>{element.title}</h3>
+                                <h4>point: {element.point}</h4>
+                            
+                            </div>
+                            <div className="options">
+                                {element.options.map((e,idx) =>{
+                                    return(
+                                        <div className="option">
+                                            <label for={i+"option"+idx}>
+                                                <input type="radio" id={i+"option"+idx} name={"question"+i} value={element.point}></input>
+                                                {e}
+                                            </label>
+                                        </div>
+                                    )
+                                })}
+
+                            </div>
+                        </div>
+                        </>
                         )
                     })}
+                    <button className="next">Next</button>
                 </div>
                 <div className="exambox " >
                     {QuizData[1].step2[0].map(element => {
                       console.log(element.title);
                       return(
-                        <div>{element.title}</div>
+                        <>
+                        <div className="questionbox">
+                            <div className="questiontitle">
+                                <h3>{element.title}</h3>
+                                <h4>point: {element.point}</h4>
+                                
+                            </div>
+                        </div> 
+                        </>
                         )
                     })}
+                    <button className="next">Next</button>
                 </div>
                 <div className="exambox " >
                     {QuizData[2].step3[0].map(element => {
                       console.log(element.title);
                       return(
-                        <div>{element.title}</div>
+                        <>
+                        <div className="questionbox">
+                            <div>{element.title}</div>
+                        </div> 
+                        </>
                         )
                     })}
+                    <button className="done">Done</button>
                 </div>
             </div>
         </>

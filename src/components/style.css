@@ -131,16 +131,40 @@ header nav{
 .menu li:hover{background: #3D195B; color: #fff;}
 .menu li:hover::after{width: 100%;}
 
-.examcontainer{width: 1200px; height:800px; margin: 0 auto; position: relative; top: 100px;}
-.exambox{width: 900px; height: 800px; opacity: 0; border: 1px solid; position: absolute; right: 0;}
+.examcontainer{width: 1200px; height:800px; margin: 0 auto; position: relative; top: 150px;}
+.exambox{width: 900px; height: 800px; overflow: scroll; overflow-x: hidden; opacity: 0; position: absolute; right: 0;}
 .choose{position: absolute; width: 300px; height: 800px; left: 0;filter:brightness(.9); }
 .zero{ background: url("../img/pre.jpg") ;}
 .one{ background: url("../img/tot.jpg");}
 .two{ background: url("../img/man.jpg");}
-.stepbox{width: 200px; height: 150px; margin-left: 10px; background: #fff; border-radius: 10px; margin-top: 30px;}
+.stepbox{width: 200px; height: 150px; margin-left: 10px; background: #fff; opacity: .7; border-radius: 10px; margin-top: 30px;}
 .stepbox h2{font-size: 30px; width: 150px; transition: .3s; padding: 10px 20px; border-radius: 10px; cursor: pointer;}
 .stepbox .act{background: #3D195B; color: #fff; }
 .stepbox p{margin-top: 5px;}
 
-.opa{opacity: 1;}
+.opa{opacity: 1; z-index: 100;}
+
+.questionbox{width: 600px;margin-left: 80px; margin-top: 30px;}
+.options{margin-top: 10px;}
+.option{margin-top: 5px;}
+.option input{margin-right: 10px;}
+
+.exambox::-webkit-scrollbar {
+  width: 10px;
+}
+.exambox::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.exambox::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px #3D195B;
+}
+.next{padding: 10px 20px; margin-bottom: 50px; margin-top: 30px; transition: .3s; cursor: pointer; margin-left: 750px; background: #fff; border: 1px solid #3D195B; border-radius: 10px;}
+.done{padding: 10px 20px; margin-bottom: 50px; margin-top: 30px; transition: .3s; cursor: pointer; margin-left: 750px; background: #fff; border: 1px solid #3D195B; border-radius: 10px;}
+.next:hover{background: #3D195B; color: #fff;}
+.done:hover{background: #3D195B; color: #fff;}
 
