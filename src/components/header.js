@@ -9,7 +9,10 @@ function Header() {
               src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png"
             ></img>
           </a>
-          <ul></ul>
+          <ul className="menu flex">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Quiz">Quiz</a></li>
+          </ul>
         </div>
       </header>
     </>

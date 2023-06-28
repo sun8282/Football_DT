@@ -13,7 +13,7 @@ const NewsItem = ({ article }) => {
   const { title, description, url, urlToImage } = article;
   console.log(description, urlToImage);
   return (
-    <NewsItemBlock>
+    <NewsItemBlock className="newsitem">
       {/* {urlToImage && (
         <div className="thumbnail">
           <a href={url} target="_blank" rel="noopener noreferrer">

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Squads from "./components/TeamSquad";
 import Playerdetails from "./components/playerdetails";
+import Quiz from "./components/Quiz";
 import "./index.css";
 import "./reset.css";
 import App from "./App";
@@ -43,6 +44,15 @@ root.render(
           <>
             <Header></Header>
             <Playerdetails />
+          </>
+        }
+      />
+      <Route
+        path="/Quiz"
+        element={
+          <>
+            <Header></Header>
+            <Quiz />
           </>
         }
       />

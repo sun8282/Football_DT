@@ -4,7 +4,6 @@ import NewsItem from "./newsItem";
 
 import axios from "axios";
 const NewsItemBlock = styled.div`
-    border: 1px solid #000;
     // padding-bottom: 3rem;
     width: 500px:
     height: 800px;
@@ -52,11 +51,15 @@ const NewsList = ({ category }) => {
   }
 
   return (
-    <NewsItemBlock>
+    <>
+    <h2 className="newstitle">Hot News 🔥</h2>
+    <NewsItemBlock className="newsblock">
+    
       {articles.map((v) => (
         <NewsItem key={v.url} article={v} />
       ))}
     </NewsItemBlock>
+    </>
   );
 };
 

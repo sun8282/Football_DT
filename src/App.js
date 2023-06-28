@@ -12,8 +12,10 @@ function App() {
   return (
     <>
       <Plvideo></Plvideo>
-      <Table></Table>
-      <NewsList></NewsList>
+      <div className="tablecontainer">
+        <Table></Table>
+        <NewsList></NewsList>
+      </div>
     </>
   );
 }

@@ -1,0 +1,123 @@
+{
+    "kr" : [
+        {"step1":[
+            [
+                {
+                    "title": "프리미어 리그에서 가장 많은 골을 넣은 선수는?","options":["해리 케인","앨런 시어러","제이미 바디","세르히오 아구에로"],"hint" : "이 선수는 잉글랜드 축구 역사에서 빼놓을 수 없는 레전드 선수이며, 현재는 은퇴 후 해설자 일을 하고 있다.","point" : 5
+                },
+                {
+                    "title": "이 중 프리미어리그 통산 100골을 넣지 못한 선수를 고르시오.","options":["손흥민","저메인 데포","데런 벤트","루드 반니스텔루이"],"hint": "이 선수는 네덜란드 리그 출신 선수이며, 원톱 공격수로써 가장 완벽하다는 평가를 받던 선수이다.","point" : 5
+                },
+                {
+                    "title" : "프리미어리그 최다 우승 메달을 가진 선수는?","options":["크리스티아누 호날두","페르난도 토레스","로베르 피레스","라이언 긱스"],"hint": "이 선수는 항상 사생활 문제로 논란이 많았고, 별명은 왼발의 마법사와 불륜왕이다.","point" : 5
+                },
+                {
+                    "title" : "프리미어리그에서 가장 많은 골을 합작한 듀오는?","options":["로베르 피레스 - 티에리 앙리 (거너스 듀오)","프랭크 램파드 - 디디에 드록바 (푸른 심장 듀오)","손흥민 - 해리 케인 (손케 듀오)","해리 케인 - 크리스티안 에릭센 (토트넘의 주무기)"],"hint": "이 듀오는 둘 다 각자의 국가대표팀에서 주장을 맡고 있다.","point" : 5
+                },
+                {
+                    "title" : "다음 중 프리미어리그 명예의 전당에 들어가있지 않은 선수는?","options":["크리스티아누 호날두","데이비드 베컴","뱅상 콤파니","이안 라이트"],"hint": "이 선수는 아주 잘생긴 외모와 뛰어난 자기관리로 엄청난 스타성을 가졌고 여자 팬이 많은 선수이다.","point" : 5
+                },
+                {
+                    "title" : "프리미어리그에서 가장 많은 클린시트(무실점 경기)를 기록한 골키퍼는?","options":["다비드 데헤아","에드윈 반데르사르","페트르 체흐","위고 요리스"],"hint": "이 선수는 심한 머리 부상을 겪은 후로 머리에 헤드 기어를 차고 경기를 뛰는 것으로 유명하다.","point" : 5
+                },
+                {
+                    "title" : "프리미어리그에서 가장 많은 중거리 골을 넣은 선수는?","options":["폴 스콜스","프랭크 램파드","스티븐 제라드","웨인 루니"],"hint": "이 선수는 은퇴 후 감독을 하고 있고, 최고의 미들라이커로 불린 선수이다.","point" : 5
+                },
+                {
+                    "title" : "프리미어리그에서 가장 많은 프리킥 골을 넣은 선수는?","options":["제임스 워드 프라우스","크리스티안 에릭센","키어런 트리피어","데이비드 베컴"],"hint": "이 선수는 특유의 킥력으로 유명했으며 또한 엄청난 외모로 주목 받았다.","point" : 5
+                }
+            ]
+        ]},
+        {"step2":[
+            [
+                {
+                        "title": "다음 소속 팀을 보고 선수 이름을 맞추시오.","img" :"./img/no1.jpg","hint" : "이 선수는 뛰어난 멀티 플레이 능력과 공격가담 능력으로 가장 현대적인 풀백으로 불린다.","point" : 8
+                },
+                {
+                        "title": "다음 소속 팀을 보고 선수 이름을 맞추시오.","img" :"./img/no2.jpg","hint" : "이 선수는 현대 축구에서 보기 드문 클래식한 윙어이며, 헤어 스타일 때문에 요한 크루이프와 닮았다는 의견이 있다.","point" : 8
+                }
+                ,
+                {
+                        "title": "다음 소속 팀을 보고 선수 이름을 맞추시오.","img" :"./img/no3.jpg","hint" : "이 선수의 포지션은 풀백이며, 아스날 팬임에도 토트넘에서 꽤 오랜 시간 뛰었던 선수이다. 또한 크로스를 못 올린다는 밈이 있다.","point" : 8
+                },
+                {
+                        "title": "다음 소속 팀을 보고 선수 이름을 맞추시오.","img" :"./img/no4.jpg","hint" : "이 선수의 포지션은 센터백이며, 프랑스와 스페인의 국대를 둘 다 뛰어본 특별한 경험이 있는 선수이다.","point" : 8
+                },
+                {
+                        "title": "다음 소속 팀을 보고 선수 이름을 맞추시오.","img" :"./img/no5.jpg","hint" : "항상 춤을 추고 SNS 를 활발히 하며, 개인 브랜드까지 있는 것에 비해 축구에는 소홀한 것 떄문에 팬들에게 비난을 받았었다.","point" : 8
+                }
+            ]
+        ]},
+        {"step3":[
+            [
+                {
+                        "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team1.jpg","hint" : "과거에 유러피안 컵 (현재로 치면 챔피언스 리그)를 2번 우승했을 만큼 역사가 깊은 팀이다.","point" : 10
+                },
+                {
+                    "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team2.jpg","hint" : "사우디 국부펀드에서 매입한 클럽으로 막대한 자본을 통해 점점 성장하고 있는 클럽이다.","point" : 10
+                }
+            ]
+        ]}
+    ],
+    "en" : [
+        {"step1":[
+            [
+                {
+                    "title": "Who scored the most goals in the All time Premier League?","options":["Harry Kane","Alan Shearer","Jamie Vardy","Sergio Agüero"],"hint":"This player is an indispensable legend in English football history and is currently working as a commentator.","point" : 5
+                },
+                {
+                    "title": "Choose a player who has not scored 100 Premier League goals.","options":["Son Heung-min","Jermain Defoe","Darren Bent","Ruud van Nistelrooy"],"hint": "This player is a former Dutch league player and was considered the most perfect striker.","point" : 5
+                },
+                {
+                    "title" : "Which player has the most Premier League medals?","options":["Cristiano Ronaldo","Fernando Torres","Robert Pirès","Ryan Giggs"],"hint": "This player has always been controversial over privacy issues, and his nickname is left-footed wizard and infidelity king.","point" : 5
+                },
+                {
+                    "title" : "The duo who scored the most goals in the Premier League","options":["Robert Pirès - Thierry Henry (The Gunners duo)","Frank Lampard - Didier Drogba (Blue Heart Duo)","Son Heung-min - Harry Kane(Son and Kane Combination)","Harry Kane - Christian Eriksen (The Superweapon of Spurs)"],"hint": "The duo are both captains of the national team.","point" : 5
+                },
+                {
+                    "title" : "Which of the following players is not in the Premier League Hall of Fame?","options":["Cristiano Ronaldo","David Beckham","Vincent Kompany","Ian Wright"],"hint": "This player has a huge star quality with his very good looks and excellent self-management, and he has a lot of female fans.","point" : 5
+                },
+                {
+                    "title" : "Which goalkeeper has the most clean sheets in the Premier League?","options":["David de Gea","Edwin van der Sar","Petr Čech","Hugo Lloris"],"hint": "The player is famous for running with head gear on his head after suffering a severe head injury.","point" : 5
+                },
+                {
+                    "title" : "Which player scored the most mid-range goals in the Premier League?","options":["Paul Scholes","Frank Lampard","Steven Gerrard","Wayne Rooney"],"hint": "This player has been coaching since his retirement and has been called the best Incursore.","point" : 5
+                },
+                {
+                    "title" : "Which player scored the most free-kick goals in the Premier League?","options":["James Ward-Prowse","Christian Eriksen","Kieran Trippier","David Beckham"],"hint": "The player was famous for his unique kick and also attracted attention for his tremendous appearance.","point" : 5
+                }
+            ]
+        ]},
+        {"step2":[
+            [
+                {
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no1.jpg","hint" : "This player is called the most modern fullback for his excellent multi-play and offensive ability.","point" : 8
+                },
+                {
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no2.jpg","hint" : "This player is a rare classic winger in modern football, and there is an opinion that he resembles Johan Cruyff because of his hairstyle.","point" : 8
+                }
+                ,
+                {
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no3.jpg","hint" : "이 선수의 포지션은 풀백이며, 아스날 팬임에도 토트넘에서 꽤 오랜 시간 뛰었던 선수이다. 또한 크로스를 못 올린다는 밈이 있다.","point" : 8
+                },
+                {
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no4.jpg","hint" : "이 선수의 포지션은 센터백이며, 프랑스와 스페인의 국대를 둘 다 뛰어본 특별한 경험이 있는 선수이다.","point" : 8
+                },
+                {
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no5.jpg","hint" : "항상 춤을 추고 SNS 를 활발히 하며, 개인 브랜드까지 있는 것에 비해 축구에는 소홀한 것 떄문에 팬들에게 비난을 받았었다.","point" : 8
+                }
+            ]
+        ]},
+        {"step3":[
+            [
+                {
+                        "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team1.jpg","hint" : "과거에 유러피안 컵 (현재로 치면 챔피언스 리그)를 2번 우승했을 만큼 역사가 깊은 팀이다.","point" : 10
+                },
+                {
+                    "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team2.jpg","hint" : "사우디 국부펀드에서 매입한 클럽으로 막대한 자본을 통해 점점 성장하고 있는 클럽이다.","point" : 10
+                }
+            ]
+        ]}
+    ],                
+    "answer" :[2,4,4,3,1,3,2,4,["주앙 칸셀루","칸셀루","Joao Cancelo","Cancelo"],["브라이안 힐","브리안 힐","브라이언 힐","힐","Bryan Gil","Gil"],["세르주 오리에","오리에","Serge Aurier","Aurier"],["에미릭 라포르테","에미리크 라포르테","라포르테","라포르트","에미리크 라포르트","에미릭 라포르트","에므리크 라포르트","에므리크 라포르테","Aymeric Laporte","Laporte"],["린가드","제시 린가드","Jesse Lingard","Lingard"],["노팅엄","노팅엄 포레스트","노팅엄 포레스트 FC","노팅엄 FC"],["뉴케슬","뉴케슬 유나이티드","뉴케슬 FC","뉴케슬 유나이티드 FC"]]
+}

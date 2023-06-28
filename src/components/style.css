@@ -1,4 +1,5 @@
   a{color: inherit;}
+  .flex{display: flex;}
   .positionbox {
     text-align: center;
     display: flex;
@@ -89,8 +90,57 @@
 .cards{width: 30px;}
 .statbox{display: flex; width: 1200px; height: 600px; margin: 0 auto; border: 1px solid #000;}
 /* .stats{} */
-.header{width: 100%; height: 100px;}
+/* .header{width: 100%; height: 100px;} */
 .headerimg{
   width: 150px; 
 }
 .container{width: 60%; height: 100px; margin: 0 auto; display: flex; align-items: center;}
+
+.tablecontainer{position: relative; width: 1800px; height: 900px; margin: 0 auto;}
+.newsblock{width: 350px; height: 500px; overflow: scroll; position: absolute; top: 200px; right: 100px;}
+.newstitle{position: absolute; top: 190px; right: 310px;}
+.newsblock::-webkit-scrollbar {
+  width: 10px;
+}
+.newsblock::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.newsblock::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px #3D195B;
+}
+.newsitem{width: 300px; font-size: 12px;}
+
+header{
+  width: 100%; height: 100px; z-index: 100;position: fixed; background: #fff; box-shadow: 0 1px 3px 0 #000;
+  }
+header nav{
+      width: 1200px;
+      height: 100%;
+      align-items: center;
+      margin: 0 auto;
+      justify-content: space-between;
+  }
+.menu{width: 800px; justify-content: end; align-items: end; height: 100%;}
+.menu li{width: 140px; height: 80px; position: relative; text-align: center; line-height: 80px; transition: .3s;}
+.menu li::after{position: absolute; content: ""; display: block; width: 0%; height: 3px; left: 50%; bottom: 0px; background: #4F709C; transform: translateX(-50%); transition: .3s;}
+.menu li:hover{background: #3D195B; color: #fff;}
+.menu li:hover::after{width: 100%;}
+
+.examcontainer{width: 1200px; height:800px; margin: 0 auto; position: relative; top: 100px;}
+.exambox{width: 900px; height: 800px; opacity: 0; border: 1px solid; position: absolute; right: 0;}
+.choose{position: absolute; width: 300px; height: 800px; left: 0;filter:brightness(.9); }
+.zero{ background: url("../img/pre.jpg") ;}
+.one{ background: url("../img/tot.jpg");}
+.two{ background: url("../img/man.jpg");}
+.stepbox{width: 200px; height: 150px; margin-left: 10px; background: #fff; border-radius: 10px; margin-top: 30px;}
+.stepbox h2{font-size: 30px; width: 150px; transition: .3s; padding: 10px 20px; border-radius: 10px; cursor: pointer;}
+.stepbox .act{background: #3D195B; color: #fff; }
+.stepbox p{margin-top: 5px;}
+
+.opa{opacity: 1;}
+
