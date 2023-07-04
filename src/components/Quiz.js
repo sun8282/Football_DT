@@ -132,14 +132,15 @@ function Quiz() {
                 </div>
                 <div className="exambox " >
                     {QuizData[1].step2[0].map(element => {
-                      console.log(element.title);
+                      console.log(element.img);
                       return(
                         <>
                         <div className="questionbox">
                             <div className="questiontitle">
                                 <h3>{element.title}</h3>
                                 <h4>point: {element.point}</h4>
-                                
+                                <img src={element.img}></img>
+                                <input type="text" placeholder="선수 이름을 입력하세요."></input>
                             </div>
                         </div> 
                         </>
