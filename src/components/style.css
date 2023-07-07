@@ -1,5 +1,6 @@
   a{color: inherit;}
   .flex{display: flex;}
+  .none{display: none;}
   .positionbox {
     text-align: center;
     display: flex;
@@ -168,3 +169,19 @@ header nav{
 .next:hover{background: #3D195B; color: #fff;}
 .done:hover{background: #3D195B; color: #fff;}
 
+.questiontitle div{
+  width: 500px; height: 200px;
+}
+.answerinput{width: 200px; height: 30px; font-size: 18px; margin-top: 10px;}
+.img0{background: url("../img/no1.png");}
+.img1{background: url("../img/no2.png");}
+.img2{background: url("../img/no3.png");}
+.img3{background: url("../img/no4.png");}
+.img4{background: url("../img/no5.png");}
+
+.teamimg0,.teamimg1{width: 750px; height: 500px; margin-top: 30px;}
+.teamimg0{background: url("../img/team1.png");}
+.teamimg1{background: url("../img/team2.png");}
+.hintbox{margin-top: 20px;}
+.hintbox button{padding: 5px 15px; border: none; border-radius: 5px; background: #000; color: #fff;}
+.hintbox h5{margin-top: 10px;}
