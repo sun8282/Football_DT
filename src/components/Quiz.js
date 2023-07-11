@@ -6,6 +6,7 @@ function Quiz() {
     const [QuizData, setQuizData] = useState([]);
     const [EnKr, setleng] = useState(true);
     const [answer,setanswer] = useState([]);
+    let Useranswer =[]
     const Exambox = styled.div`
                     width: 100px; 
                     height: 100px; 
@@ -27,39 +28,46 @@ function Quiz() {
                     setQuizData(result.en);
                     setanswer(result.answer)
                 }
-            // }
-        //   } catch (error) {
-        //     console.error(error);
-        //   }
         };
         getData();
       }, [EnKr]);
-      
-    //   const step1 =QuizData[0].step1[0]
-    // const
-    // console.log(QuizData[0].step1[0].length)
     let i =0;
     function Clickstep(el){
         el.preventDefault();
         const steps =document.querySelectorAll(".stepbox h2")
         const choose = document.querySelector(".choose")
         const exams = document.querySelectorAll(".exambox")
+        const options = document.querySelectorAll(".option label input:checked")
         steps.forEach(element => {
             element.classList.remove("act")
         });
         
-        el.target.classList.add("act")
+        
         if(i === 0){
+            if(options.length !== 8){
+                alert("모든 문항을 체크 해주세요.")
+                steps[i].classList.add("act")
+                return
+            }else{
+                options.forEach(e =>{
+                    Useranswer.push([e.className,e.value])
+                })
+            el.target.classList.add("act")
             choose.classList.add("zero")
             choose.classList.remove("one")
             choose.classList.remove("two")
             i ++
+                
+            }
+            
         }else if(i===1){
+            el.target.classList.add("act")
             choose.classList.remove("zero")
             choose.classList.add("one")
             choose.classList.remove("two")
             i ++
         }else if(i===2){
+            el.target.classList.add("act")
             choose.classList.remove("zero")
             choose.classList.remove("one")
             choose.classList.add("two")
@@ -91,8 +99,20 @@ function Quiz() {
         const step1 = document.querySelector(".step1 label h2");
         const step2 = document.querySelector(".step2 label h2");
         const step3 = document.querySelector(".step3 label h2");
-        console.log(exams);
+        const options = document.querySelectorAll(".option label input:checked")
+        
+        console.log(options);
         if(el.target == btns[0]){
+            
+            if(options.length !== 8){
+                alert("모든 문항을 체크 해주세요.")
+                return
+            }else{
+                options.forEach(e =>{
+                    Useranswer.push([e.className,e.value])
+                })
+                
+            }
             exams[0].classList.remove("opa")
             exams[1].classList.add("opa")
             exams[2].classList.remove("opa")
@@ -110,40 +130,45 @@ function Quiz() {
         }
     }
     function answerSubmit(){
-        const options = document.querySelectorAll(".option label input")
-        const answerinput = document.querySelectorAll(".answerinput");
+        const answerinput = [...document.querySelectorAll(".answerinput")];
         console.log(answerinput);
-        
-        let Useranswer =[]
-        options.forEach(element => {
-        if(element.checked == true){
-            Useranswer.push([element.className,element.value])
-        }    
-        
-        
-        });
+        let chkinput = []
+        let step1point =0
+        let step2point =0
+        let step3point =0
+        let total =0
         answerinput.forEach(e =>{
-            console.log(e.value);
-            if(e.value !==""){
-            Useranswer.push([e.value,e.name]);
-        }
+            chkinput.push(e.value)
         })
+        
+       
+        if(chkinput.every((elem) => elem !=="")){
+            answerinput.forEach(e =>{
+                Useranswer.push([e.value,e.name])
+            })
+        }else{
+            return alert("비어있는 문항이 있습니다.")
+        }
         console.log(Useranswer,answer);
-        Useranswer.forEach((e,idx) =>{
-            
-            if(idx<8){
-                if(answer[idx].includes(e[0])){
-                    console.log(e);
+        Useranswer.forEach((el,idx) =>{
+            if(idx <=7){
+                if(el[0] == answer[idx]){
+                    console.log(el);
+                    step1point +=parseInt(el[1])
+                }
+            }else if(8 <= idx <=12){
+                if(answer[idx].some(e => e === el[0].trim())){
+                    step2point +=parseInt(el[1])
                 }
             }else{
-                answer[idx].forEach(v =>{
-                    console.log(v,e);
-                    if(v == e[0]){
-                        console.log(e);
-                    }
-                })
+                if(answer[idx].some(e => e === el[0].trim())){
+                    step3point +=parseInt(el[1])
+                }
             }
+            
         })
+        total = step1point +step2point +step3point
+        console.log(total);
     }
     if(QuizData.length >0){
     return (
