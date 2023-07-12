@@ -7,12 +7,8 @@ function Quiz() {
     const [EnKr, setleng] = useState(true);
     const [answer,setanswer] = useState([]);
     let Useranswer =[]
-    const Exambox = styled.div`
-                    width: 100px; 
-                    height: 100px; 
-                    border: 1px solid;
-                
-                `;
+    const langbtns = document.querySelectorAll(".chooselang");
+    const border = document.querySelector(".borderbox");
     useEffect(() => {
         const getData = async () => {
         //   try {
@@ -21,12 +17,16 @@ function Quiz() {
             // console.log(result);
             // if (result.response && result.response.length > 0) {
                 console.log(result)
-                if(EnKr === true && result.kr && result.kr.length >0){
+                if(EnKr === true){
                     setQuizData(result.kr);
                     setanswer(result.answer)
-                }else if(EnKr === false && result.en && result.en.length >0){
+                    console.log("kr");
+                }else if(EnKr === false){
                     setQuizData(result.en);
                     setanswer(result.answer)
+                    console.log(QuizData);
+                }else{
+                    console.log("seef");
                 }
         };
         getData();
@@ -45,7 +45,12 @@ function Quiz() {
         
         if(i === 0){
             if(options.length !== 8){
-                alert("모든 문항을 체크 해주세요.")
+                if(EnKr === true){
+                    alert("모든 문항을 체크 해주세요.")
+                    
+                }else{
+                    alert("Please check all the questions");
+                }
                 steps[i].classList.add("act")
                 return
             }else{
@@ -105,7 +110,12 @@ function Quiz() {
         if(el.target == btns[0]){
             
             if(options.length !== 8){
-                alert("모든 문항을 체크 해주세요.")
+                if(EnKr === true){
+                    alert("모든 문항을 체크 해주세요.")
+                }else{
+                    alert("Please check all the questions")
+                }
+                
                 return
             }else{
                 options.forEach(e =>{
@@ -170,10 +180,29 @@ function Quiz() {
         total = step1point +step2point +step3point
         console.log(total);
     }
+    function chooseLang(){
+        langbtns.forEach((e,idx) =>{
+            e.addEventListener("click",(el) =>{
+                if(el.target.innerText === "Eng"){
+                    setleng(false)
+                    border.style.right ="460px";
+                }else{
+                    setleng(true)
+                    border.style.right ="380px";
+                }
+                
+            })
+            
+        })
+    }
     if(QuizData.length >0){
     return (
-        <>
+        <>  
+            
             <div className="examcontainer">
+            <button className="chooselang eng" onClick={chooseLang}><h5>Eng</h5></button>
+            <button className="chooselang kr" onClick={chooseLang}><h5>Kr</h5></button>
+            <div className="borderbox"></div>
                 <div className="choose zero">
                     <div className="stepbox">
                         <div className="step1"><label for="input1"><h2 className="act"  onClick={Clickstep}>Step 1</h2></label></div>
@@ -214,8 +243,8 @@ function Quiz() {
                                     )
                                 })}
                                 <div className="hintbox">
-                                    <button onClick={hintClick}>힌트 보기</button>
-                                    <h5 className="none">힌트 : {element.hint}</h5>
+                                    <button onClick={hintClick}>Hint !</button>
+                                    <h5 className="none">Hint : {element.hint}</h5>
                                 </div>
 
                             </div>
@@ -238,8 +267,8 @@ function Quiz() {
                                 <div className={"img"+idx}></div>
                                 <input type="text" placeholder="선수 이름을 입력하세요." className="answerinput" name={element.point}></input>
                                 <div className="hintbox">
-                                    <button onClick={hintClick}>힌트 보기</button>
-                                    <h5 className="none">힌트 : {element.hint}</h5>
+                                    <button onClick={hintClick}>Hint !</button>
+                                    <h5 className="none">Hint : {element.hint}</h5>
                                 </div>
                             </div>
                         </div> 
@@ -259,8 +288,8 @@ function Quiz() {
                             <div className={"teamimg"+idx}></div>
                             <input type="text" placeholder="팀 이름을 입력하세요." className="answerinput" name={element.point}></input>
                             <div className="hintbox">
-                                    <button onClick={hintClick}>힌트 보기</button>
-                                    <h5 className="none">힌트 : {element.hint}</h5>
+                                    <button onClick={hintClick}>Hint !</button>
+                                    <h5 className="none">Hint : {element.hint}</h5>
                                 </div>
                         </div> 
                         </>

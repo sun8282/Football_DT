@@ -185,3 +185,11 @@ header nav{
 .hintbox{margin-top: 20px;}
 .hintbox button{padding: 5px 15px; border: none; border-radius: 5px; background: #000; color: #fff;}
 .hintbox h5{margin-top: 10px;}
+
+
+
+.chooselang{cursor: pointer; transition: .3s; width: 80px; border-radius: 10px; height: 50px; background: none; border: none; position: fixed; z-index: 101; top: 130px;}
+/* .chooselang:hover{background: #3D195B; color: #fff;} */
+.eng{right: 460px;}
+.kr{right: 380px;}
+.borderbox{position: fixed; transition: .3s; right: 380px; width: 80px; height: 50px; border-bottom: 3px solid #000; top: 130px;}
