@@ -148,7 +148,7 @@ function Quiz() {
         let step3point =0
         let total =0
         answerinput.forEach(e =>{
-            chkinput.push(e.value)
+            chkinput.push(e.value);
         })
         
        
@@ -180,15 +180,18 @@ function Quiz() {
         total = step1point +step2point +step3point
         console.log(total);
     }
-    function chooseLang(){
+    function chooseLang(el){
+        el.preventDefault()
         langbtns.forEach((e,idx) =>{
             e.addEventListener("click",(el) =>{
                 if(el.target.innerText === "Eng"){
                     setleng(false)
                     border.style.right ="460px";
+                    console.log("dsfsdf");
                 }else{
                     setleng(true)
                     border.style.right ="380px";
+                    console.log("dsf");
                 }
                 
             })
@@ -200,24 +203,24 @@ function Quiz() {
         <>  
             
             <div className="examcontainer">
-            <button className="chooselang eng" onClick={chooseLang}><h5>Eng</h5></button>
-            <button className="chooselang kr" onClick={chooseLang}><h5>Kr</h5></button>
+            <button className="chooselang eng" onMouseDown={chooseLang}><h5>Eng</h5></button>
+            <button className="chooselang kr" onMouseDown={chooseLang}><h5>Kr</h5></button>
             <div className="borderbox"></div>
                 <div className="choose zero">
                     <div className="stepbox">
-                        <div className="step1"><label for="input1"><h2 className="act"  onClick={Clickstep}>Step 1</h2></label></div>
+                        <div className="step1"><label htmlFor="input1"><h2 className="act"  onClick={Clickstep}>Step 1</h2></label></div>
                         <p>선수 이름 맞추기</p>
                     </div>
                     <div className="stepbox">
-                        <div className="step2"><label for="input2"><h2 onClick={Clickstep}>Step 2</h2></label></div>
+                        <div className="step2"><label htmlFor="input2"><h2 onClick={Clickstep}>Step 2</h2></label></div>
                         <p>소속 팀 보고 선수 맞추기</p>
                     </div>
                     <div className="stepbox">
-                        <div className="step3"><label for="input3"><h2 onClick={Clickstep}>Step 3</h2></label></div>
+                        <div className="step3"><label htmlFor="input3"><h2 onClick={Clickstep}>Step 3</h2></label></div>
                         <p>스쿼드 보고 팀 이름 맞추기</p>
                     </div>
                 </div>
-                <input type="radio" name="boxinput" id="input1" hidden checked></input>
+                <input type="radio" name="boxinput" id="input1" hidden defaultChecked></input>
                 <input type="radio" name="boxinput" id="input2" hidden></input>
                 <input type="radio" name="boxinput" id="input3" hidden></input>
                 <div className="exambox opa" >
@@ -235,7 +238,7 @@ function Quiz() {
                                 {element.options.map((e,idx) =>{
                                     return(                                    
                                             <div className="option">
-                                                <label for={i+"option"+idx}>
+                                                <label htmlFor={i+"option"+idx}>
                                                     <input type="radio" id={i+"option"+idx} name={"question"+i} value={element.point} className={idx+1}></input>
                                                     <span>{e}</span>
                                                 </label>

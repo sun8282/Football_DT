@@ -98,23 +98,23 @@
                 }
                 ,
                 {
-                        "title": "Look at the team and guess the player's name.","img" :"./img/no3.jpg","hint" : "이 선수의 포지션은 풀백이며, 아스날 팬임에도 토트넘에서 꽤 오랜 시간 뛰었던 선수이다. 또한 크로스를 못 올린다는 밈이 있다.","point" : 8
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no3.jpg","hint" : "His position is full-back and he has played for Tottenham for quite a while, but he is an Arsenal fan. And there's a meme that he's not good at crossings.","point" : 8
                 },
                 {
-                        "title": "Look at the team and guess the player's name.","img" :"./img/no4.jpg","hint" : "이 선수의 포지션은 센터백이며, 프랑스와 스페인의 국대를 둘 다 뛰어본 특별한 경험이 있는 선수이다.","point" : 8
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no4.jpg","hint" : "His position is center back, and he has special experience in playing both French and Spanish national teams.","point" : 8
                 },
                 {
-                        "title": "Look at the team and guess the player's name.","img" :"./img/no5.jpg","hint" : "항상 춤을 추고 SNS 를 활발히 하며, 개인 브랜드까지 있는 것에 비해 축구에는 소홀한 것 떄문에 팬들에게 비난을 받았었다.","point" : 8
+                        "title": "Look at the team and guess the player's name.","img" :"./img/no5.jpg","hint" : "He was criticized by fans for always dancing, active SNS, and neglecting soccer compared to his personal brand.","point" : 8
                 }
             ]
         ]},
         {"step3":[
             [
                 {
-                        "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team1.jpg","hint" : "과거에 유러피안 컵 (현재로 치면 챔피언스 리그)를 2번 우승했을 만큼 역사가 깊은 팀이다.","point" : 10
+                        "title": "Look at the next squad and guess the team name.","img" :"./img/team1.jpg","hint" : "It is a team with a long history that has won the European Cup (Champions League) twice in the past.","point" : 10
                 },
                 {
-                    "title": "다음 스쿼드를 보고 팀 이름을 맞추시오.","img" :"./img/team2.jpg","hint" : "사우디 국부펀드에서 매입한 클럽으로 막대한 자본을 통해 점점 성장하고 있는 클럽이다.","point" : 10
+                    "title": "Look at the next squad and guess the team name.","img" :"./img/team2.jpg","hint" : "It is a club purchased from the Saudi sovereign wealth fund and is growing through huge capital.","point" : 10
                 }
             ]
         ]}
