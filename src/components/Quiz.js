@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+
 function Quiz() {
     // const response = await fetch("./question.json");
     // const jsonData = await response.json();
@@ -184,6 +184,7 @@ function Quiz() {
         el.preventDefault()
         langbtns.forEach((e,idx) =>{
             e.addEventListener("click",(el) =>{
+                console.log("ee");
                 if(el.target.innerText === "Eng"){
                     setleng(false)
                     border.style.right ="460px";
@@ -228,7 +229,7 @@ function Quiz() {
                       console.log(element.title);
                       return(
                         <>
-                        <div className="questionbox">
+                        <div key={i} className="questionbox">
                             <div className="questiontitle">
                                 <h3>{element.title}</h3>
                                 <h4>point: {element.point}</h4>
@@ -237,7 +238,7 @@ function Quiz() {
                             <div className="options">
                                 {element.options.map((e,idx) =>{
                                     return(                                    
-                                            <div className="option">
+                                            <div key={idx} className="option">
                                                 <label htmlFor={i+"option"+idx}>
                                                     <input type="radio" id={i+"option"+idx} name={"question"+i} value={element.point} className={idx+1}></input>
                                                     <span>{e}</span>
@@ -262,7 +263,7 @@ function Quiz() {
                       console.log(element.img);
                       return(
                         <>
-                        <div className="questionbox">
+                        <div key={idx} className="questionbox">
                             <div className="questiontitle">
                                 <h3>{element.title}</h3>
                                 <h4>point: {element.point}</h4>
@@ -285,7 +286,7 @@ function Quiz() {
                       console.log(element.title);
                       return(
                         <>
-                        <div className="questionbox">
+                        <div key={idx} className="questionbox">
                             <h3>{element.title}</h3>
                             <h4>point: {element.point}</h4>
                             <div className={"teamimg"+idx}></div>
