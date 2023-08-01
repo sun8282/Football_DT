@@ -1,6 +1,27 @@
+  
   a{color: inherit;}
   .flex{display: flex;}
   .none{display: none;}
+  footer{width: 100%;align-items: center; height: 300px; margin-top: 200px; background: rgb(55, 0, 60);}
+  footer .container{width: 90%; justify-content: space-between;}
+  .footerText{color: #fff; font-family: 'Oswald', sans-serif;}
+  .footerSlide{overflow: hidden; width: 50%; height: 100%;position: relative;}
+  @keyframes footerslide{
+    0%{
+      left: 0%;
+    }
+    99.999%{left: -100%;}
+    100%{left: -100%;}
+  }
+  .footerSlide ul{width: 200%; height: 100%; justify-content: space-between; position: absolute; animation: footerslide 10s infinite;}
+  .footerSlide ul li{width: 20%; height: 100%; align-items: center;}
+  .footerSlide ul li:nth-child(1){width: 15%;}
+  .footerSlide ul li:nth-child(1) img{width: 60%;}
+  .footerSlide ul li:nth-child(5) img{height: 60%;}
+  .footerSlide ul li:nth-child(6){width: 15%;}
+  .footerSlide ul li:nth-child(6) img{width: 60%;}
+  .footerSlide ul li:nth-child(10) img{height: 60%;}
+  .footerSlide ul li img{width: 80%; height: 80%;}
   .positionbox {
     text-align: center;
     display: flex;
@@ -8,7 +29,7 @@
     justify-content: space-evenly;
     /* width: 800px; */
     padding: 50px 100px;
-    border: 1px solid #000;
+    border-top: 1px solid #000;
     margin: 30px auto;
     gap: 20px;
   }
@@ -25,7 +46,7 @@
     top: 5%;
     position: fixed;
   }
-  .teamtable{width: 1000px; height: 800px; margin: 0 auto; position: relative;}
+  .teamtable{width: 50%; height: 40%; margin: 200px  auto; position: relative;}
   .Team_list{
     display: flex; width: 800px; justify-content: space-evenly;
   }
@@ -74,22 +95,23 @@
 .plvideo{width: 100%;height: 50vh; margin: 0 auto;}
 .plimg{position: absolute;width: 700px; opacity: .1; top: 30%;}
 
-.squad{width: 1200px; margin: 0 auto;}
-.teamtitle{display: flex; animation: box1_1 10s linear; align-items: center; width: 650px; justify-content: space-between;}
+.squad{width: 80%; margin: 100px auto;}
+.teamtitle{display: flex; align-items: center; width: 650px; justify-content: space-between;}
 .teamtitle span{
   font-size: 50px;
 }
-@keyframes box1_1 {
+/* @keyframes box1_1 {
   0%{clip-path: polygon(0 0, 0 0, 0 0, 0 0);}
   17.5%{clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0); opacity: 1;}
   20%{opacity: 0;}
   100%{opacity: 1;}
-}
-.playerbox{width: 350px; height: 200px; display: flex; justify-content: space-evenly; align-items: center; border: 1px solid #000; border-radius: 10px;}
+} */
+.playerbox{width: 350px; height: 200px; display: flex; justify-content: space-evenly; background: #fff; align-items: center; border: 1px solid #000; border-radius: 10px;}
 .playerbox img{width: 100px;}
-.backlogo{position: fixed; top: 50%; left: 50%; width: 200px; opacity: .3; z-index: -1;}
+.backlogo{position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 200px; opacity: .3; z-index: -1;}
 .cards{width: 30px;}
-.statbox{display: flex; width: 1200px; height: 600px; margin: 0 auto; border: 1px solid #000;}
+.statbox{display: flex; width: 1200px; height: 600px; margin: 0 auto;}
+.logos{margin-right: 100px;}
 /* .stats{} */
 /* .header{width: 100%; height: 100px;} */
 .headerimg{
@@ -97,7 +119,7 @@
 }
 .container{width: 60%; height: 100px; margin: 0 auto; display: flex; align-items: center;}
 
-.tablecontainer{position: relative; width: 1800px; height: 900px; margin: 0 auto;}
+.tablecontainer{position: relative; width: 100%; height: 90%; margin: 0 auto;}
 .newsblock{width: 350px; height: 500px; overflow: scroll; position: absolute; top: 200px; right: 100px;}
 .newstitle{position: absolute; top: 190px; right: 310px;}
 .newsblock::-webkit-scrollbar {
@@ -117,10 +139,10 @@
 .newsitem{width: 300px; font-size: 12px;}
 
 header{
-  width: 100%; height: 100px; z-index: 100;position: fixed; background: #fff; box-shadow: 0 1px 3px 0 #000;
+  width: 100%; height: 100px; z-index: 102;position: fixed; top: 0; background: #fff; box-shadow: 0 1px 3px 0 #000;
   }
 header nav{
-      width: 1200px;
+      width: 100%;
       height: 100%;
       align-items: center;
       margin: 0 auto;
@@ -193,3 +215,6 @@ header nav{
 .eng{right: 460px;}
 .kr{right: 380px;}
 .borderbox{position: fixed; transition: .3s; right: 380px; width: 80px; height: 50px; border-bottom: 3px solid #000; top: 130px;}
+
+.profile{margin: 100px auto; width: 50%;align-items: end; justify-content: space-evenly; height: 20%; }
+.profile >img{width: 20%; height: 90%;}

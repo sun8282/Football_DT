@@ -9,15 +9,19 @@ import "./reset.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Header from "./components/header";
+import Footer from "./components/footer";
 // import axios from 'axios';
 // const axios = require('axios');
-
+document.cookie = "safeCookie1=foo; SameSite=Lax";
+document.cookie = "safeCookie2=foo";
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
+
   <BrowserRouter>
     <Routes>
       <Route
@@ -26,6 +30,7 @@ root.render(
           <>
             <Header></Header>
             <App />
+            <Footer></Footer>
           </>
         }
       />
@@ -35,6 +40,7 @@ root.render(
           <>
             <Header></Header>
             <Squads />
+            <Footer></Footer>
           </>
         }
       />
@@ -44,6 +50,7 @@ root.render(
           <>
             <Header></Header>
             <Playerdetails />
+            <Footer></Footer>
           </>
         }
       />
@@ -53,6 +60,7 @@ root.render(
           <>
             <Header></Header>
             <Quiz />
+            <Footer></Footer>
           </>
         }
       />

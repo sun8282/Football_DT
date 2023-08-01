@@ -52,20 +52,23 @@ function Playerdetails() {
     const statdata = footballData.response[0].statistics;
     return (
       <>
-        <div className="profile">
+        <div className="profile flex">
+          <img src={statdata[0].team.logo}></img>
           <img src={`${playerdata.photo}`}></img>
-          <h1>{playerdata.name}</h1>
-          <h2>
-            {playerdata.firstname} {playerdata.lastname}
-          </h2>
-          <ul>
-            <li>{playerdata.age}</li>
-            <li>{playerdata.birth.date}</li>
-            <li>{playerdata.nationality}</li>
-            <li>{playerdata.birth.place}</li>
-            <li>{playerdata.height}</li>
-            <li>{playerdata.weight}</li>
-          </ul>
+          <div>
+            <h1>{playerdata.name}</h1>
+            <h2>
+              {playerdata.firstname} {playerdata.lastname}
+            </h2>
+            <ul>
+              <li>{playerdata.age}</li>
+              <li>{playerdata.birth.date}</li>
+              <li>{playerdata.nationality}</li>
+              <li>{playerdata.birth.place}</li>
+              <li>{playerdata.height}</li>
+              <li>{playerdata.weight}</li>
+            </ul>
+          </div>
         </div>
         <div className="statistics">
           {statdata.map((item) => {
@@ -85,7 +88,6 @@ function Playerdetails() {
                     "https://media-1.api-sports.io/football/leagues/30.png"
                       ? "월드컵 예선"
                       : ""}
-                    <img src={item.team.logo}></img>
                   </div>
 
                   <ul className="stats">
